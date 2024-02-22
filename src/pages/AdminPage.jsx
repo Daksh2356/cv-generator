@@ -587,7 +587,7 @@ const AdminPage = () => {
         </div>
         <br />
         <br />
-        <div className="flex flex-wrap gap-6">
+        <div className="flex flex-wrap gap-6 mx-6">
           <button
             className="p-2 bg-white text-black rounded-lg border-4 focus:outline-none hover:bg-cyan-500"
             type="submit"

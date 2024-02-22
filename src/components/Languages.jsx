@@ -3,28 +3,28 @@ import React from 'react'
 const Languages = () => {
     const storedData = JSON.parse(localStorage.getItem("cvData"));
     const languages = storedData?.languages || {
-      language1: "",
-      language2: "",
-      language3: "",
-      proficiency1: "",
-      proficiency2: "",
-      proficiency3: "",
+      language1: "English",
+      language2: "Hindi",
+      language3: "French",
+      proficiency1: "90",
+      proficiency2: "89",
+      proficiency3: "75",
     };
 
     return (
-        <div className='mt-2 p-3'>
-          <h1 className='text-3xl '>Languages</h1>
-            <pre className='text-sm'> 
+        <div className='mt-2 p-3 text-start'>
+          <h1 className='text-3xl font-roboto tracking-tight hover:underline '>Languages</h1>
+            <pre className='text-xl font-roboto tracking-widest'> 
             
-            {languages.language1}  {languages.proficiency1}
+            {languages.language1}  {languages.proficiency1 && "%"} 
             </pre>
 
-            <pre className='text-sm'>
-            {languages.language2}  {languages.proficiency2}
+            <pre className='text-xl font-roboto tracking-widest'>
+            {languages.language2}  {languages.proficiency2 && "%"}
             </pre>
 
-            <pre className='text-sm'>
-            {languages.language3}  {languages.proficiency3}
+            <pre className='text-xl font-roboto tracking-widest'>
+            {languages.language3}  {languages.proficiency3 && "%"}
             </pre>
             
 

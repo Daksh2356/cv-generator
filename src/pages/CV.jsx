@@ -8,16 +8,17 @@ import Experience from '../components/Experience';
 import Education from '../components/Education';
 import About from '../components/About';
 
+
 const CV = () => {
   return (
-    <div className='flex flex-row h-screen bg-gray-200'>
-        <div className='w-1/3 bg-gray-300'>
+    <div className='mg:flex-col lg:flex flex-row h-full'>
+        <div className='md:w-full  lg:w-1/3 bg-gray-300 flex flex-col items-center '>
         <Picture/>
         <Contact/>
         <Skills/>
         <Languages/>
       </div>
-        <div className='w-2/3 bg-white'>
+        <div className='md:w-full lg:w-2/3 bg-white'>
         <Name/>
         <About/>
         <Experience/>

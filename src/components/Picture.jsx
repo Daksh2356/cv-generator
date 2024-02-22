@@ -7,8 +7,8 @@ const Picture = () => {
   const imgSrc = storedData?.picture || "https://shorturl.at/ozBG0";
 
   return (
-    <div className='w-1/2 '>
-      <img src={imgSrc} alt='Profile' className=' rounded-full' />
+    <div className='mt-5 flex justify-center items-center w-full '>
+      <img src={imgSrc} alt='Profile' className='rounded-full w-52 h-52 object-cover ' />
     </div>
   )
 }
