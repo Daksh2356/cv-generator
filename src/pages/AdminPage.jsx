@@ -2,53 +2,53 @@ import React, { useState, useEffect } from "react";
 
 const AdminPage = () => {
   const [formData, setFormData] = useState({
-    profilePicture: "",
-    fullname: "",
-    designation: "",
+    profilePicture: "https://shorturl.at/ozBG0",
+    fullname: "John Doe",
+    designation: "Software Developer",
     contact: {
-      email: "",
-      phone: "",
-      address: "",
+      email: "johndoe@gmail.com",
+      phone: "1234567899",
+      address: "ABC Street, XYZ City, 12345",
     },
-    aboutme: "",
+    aboutme: "I have experience in both front-end and back-end development, and I am always eager to learn new technologies and tools.",
     education: {
-      degree1: "",
-      institute1: "",
-      duration1: "",
-      summary1: "",
-      degree2: "",
-      institute2: "",
-      duration2: "",
-      summary2: "",
+      degree1: "BTECH in Computer Science and Engineering",
+      institute1: "ABC University, XYZ City, 12345",
+      duration1: "2018-2022",
+      summary1: "I have completed my BTECH in Computer Science and Engineering from ABC University, XYZ City, 12345. I have scored 8.5 CGPA.",
+      degree2: "Intermediate",
+      institute2: "ABC School, XYZ City, 12345",
+      duration2: "2016-2018",
+      summary2: "I have completed my Intermediate from ABC School, XYZ City, 12345. I have scored 95%.",
     },
     experience: {
-      companyName1: "",
-      position1: "",
-      duration1: "",
-      description1: "",
-      companyName2: "",
-      position2: "",
-      duration2: "",
-      description2: "",
-      companyName3: "",
-      position3: "",
-      duration3: "",
-      description3: "",
+      companyName1: "ABC Company",
+      position1: "Software Developer",
+      duration1: "2019-2021",
+      description1: "Developed and maintained the company's website and web applications.",
+      companyName2: "XYZ Company",
+      position2: "Front-end Developer",
+      duration2: "2017-2019",
+      description2: "Worked on the company's website and web applications.",
+      companyName3: "PQR Company",
+      position3: "Intern",
+      duration3: "2016-2017",
+      description3: "Worked as an intern and learned about web development.",
     },
     skills:{
-      skill1: "",
-      skill2: "",
-      skill3: "",
-      skill4: "",
-      skill5: "",
+      skill1: "Programming",
+      skill2: "Desgining",
+      skill3: "Typist",
+      skill4: "Leadership",
+      skill5: "Teamwork",
     },
     languages: {
-      language1: "",
-      language2: "",
-      language3: "",
-      proficiency1: "",
-      proficiency2: "",
-      proficiency3: "",
+      language1: "English",
+      language2: "Hindi",
+      language3: "French",
+      proficiency1: "90",
+      proficiency2: "89",
+      proficiency3: "75",
     },
   });
 
@@ -56,7 +56,7 @@ const AdminPage = () => {
     // Fetch data from local storage on component mount
     const storedData = localStorage.getItem("cvData");
     if (storedData) {
-      setFormData(storedData); // Set Welcome data
+      setFormData(JSON.parse(storedData)); 
     }
   }, []);
 
@@ -595,7 +595,7 @@ const AdminPage = () => {
             Update Data
           </button>
           <button
-            onClick={() => setFormData({})}
+            onClick={() => setFormData({}, localStorage.removeItem("cvData"), alert("Data reset successfully!"))}
             className="p-2 bg-white text-black rounded-lg border-4 focus:outline-none hover:bg-cyan-500"
             type="reset"
           >

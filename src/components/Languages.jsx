@@ -16,15 +16,15 @@ const Languages = () => {
           <h1 className='text-3xl font-roboto tracking-tight hover:underline '>Languages</h1>
             <pre className='text-xl font-roboto tracking-widest'> 
             
-            {languages.language1}  {languages.proficiency1 && "%"} 
+            {languages.language1}  {languages.proficiency1 ? languages.proficiency1 + "%" : ""} 
             </pre>
 
             <pre className='text-xl font-roboto tracking-widest'>
-            {languages.language2}  {languages.proficiency2 && "%"}
+            {languages.language2}  {languages.proficiency2 ? languages.proficiency2 + "%" : ""}
             </pre>
 
             <pre className='text-xl font-roboto tracking-widest'>
-            {languages.language3}  {languages.proficiency3 && "%"}
+            {languages.language3}  {languages.proficiency3 ? languages.proficiency3 + "%" : ""}
             </pre>
             
 
